@@ -1,0 +1,29 @@
+<div>
+    <header>
+    <nav>
+ <div class="menu">
+                <div class="zefirka">
+      <span class="zefname">ЗЕФІРКА</span> <br>
+                    <span class="dk">домашня кондитерська</span> </div>
+           <div ng-show="home">
+            <a ng-click="homeStatus()" class="menuBtn">
+            <img src="images/home.svg" style="width: 30px; height: 30px; vertical-align: bottom">
+            Головна</a> 
+            </div>
+             
+            <div><a ng-click="blogStatus()" class="menuBtn">
+            <img src="images/blog.svg" style="width: 30px; height: 30px; vertical-align: bottom">
+            Блог</a></div>
+            <div>
+            <a ng-click="shopStatus()" class="menuBtn">
+            <img src="images/cakeicon.svg" style="width: 30px; height: 30px; vertical-align: bottom">
+            Наші вироби</a> 
+            </div>
+    
+                   <div ng-show="contact"><a ng-click="contactStatus()" class="menuBtn">
+            <img src="images/contacts.svg" style="width: 30px; height: 30px; vertical-align: bottom">
+                   Контакти</a></div>
+        </div>
+    </nav>
+     </header>
+</div>

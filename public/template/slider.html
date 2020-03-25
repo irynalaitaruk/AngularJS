@@ -1,0 +1,26 @@
+<div>
+<div>
+    <input type="text" ng-show="inputFilter" class="inpt" placeholder="search" ng-model="searchBlock">
+</div>
+ <div ng-repeat="a in arr | filter:searchBlock" class="textBlock" ng-hide="blog">
+                
+                 <h2>{{a.title}}</h2>
+                 <p>{{a.text}}</p>
+ </div>
+
+<div ng-show="slider">
+
+ <div id="box">
+  <div id="slider">
+    <img class="img1 imgs" src="images/cake6.jpg"> 
+    <img class="img2 imgs" src="images/cake2.jpg">
+    <img class="img3 imgs" src="images/cake3.jpg">
+    <img class="img4 imgs" src="images/cake4.jpg">
+    <img class="img5 imgs" src="images/cake5.jpg">
+    <img class="img6 imgs" src="images/cake1.jpg">
+  </div>  
+    </div>    
+</div>
+
+
+</div>

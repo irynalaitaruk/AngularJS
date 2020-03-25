@@ -1,0 +1,408 @@
+/*
+*{
+	transition: all 2s;
+}
+*/
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face{
+    font-family: 'Pacifico';
+    src: url(fonts/Pacifico-Regular.ttf); 
+}
+@font-face{
+    font-family: 'Neucha';
+    src: url(fonts/Neucha.ttf); 
+}
+/*preloader*/
+.loaderArea {
+/*  background: linear-gradient(#ffd699, white, #ffd699);*/
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  z-index: 100000;
+}
+
+.loader{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+  width:100px;
+  height:100px;
+}
+.loader hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+
+.loader :first-child{background:#888844;animation-delay:-1.5s}
+.loader :nth-child(2){background:#cc6600;animation-delay:-1s}
+.loader :nth-child(3){background:rgb(0,77,0);animation-delay:-0.5s}
+.loader :last-child{background:#4d3319}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+}
+/**/
+body {
+/*    background: #ffe0b3;*/
+    background: #fff5e6;
+}
+header{
+    height: 12vw;
+    width: 1065px;
+    padding: 20px;
+    background: white;
+    background-image: linear-gradient(90deg, rgba(0,77,0,.5) 50%, transparent 0), linear-gradient(rgba(0,77,0,.5) 50%, transparent 0);
+    background-size: 20px 20px;
+}
+.zefirka{
+    border: 4px groove #004d00;
+    border-radius: 40px;
+    background: linear-gradient(white, #b07136);
+}
+.zefname{
+    font-family: 'Pacifico';
+    font-size: 58px;
+    letter-spacing: 15px;
+    color: #888844;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #004d00;
+    text-shadow: 3px 3px 1px white;
+}
+.dk{
+    font-family: 'Neucha';
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+/*
+.home{
+    background: url('css_sprites.png') -277px -25px;
+}
+*/
+.menu{
+    display: flex;
+    align-items: flex-end;
+}
+.menuBtn{
+    width: auto;
+    height: 35px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #e63900;
+    border-radius: 15px;
+    font-family: 'Pacifico';
+    box-shadow: 2px 2px gray;
+    background: linear-gradient(white,#cc6600);
+    cursor: pointer;
+    margin-left: 15px;
+}
+.menuBtn:hover{
+    border: 4px groove #004d00;
+    box-shadow: 2px 2px 2px 2px #89592a;
+}
+a:active{
+    background-color: white;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 1105px;
+    justify-content: space-between;
+    font-family: 'Neucha';
+    height: 50vw;
+}
+.first,.second{
+    height: 45vw;
+    border: 1px solid #ffc266;
+    padding: 20px;
+    margin: 10px;
+    text-align: justify; 
+    background-color: white;
+}
+
+.colon{
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-family: 'Pacifico';
+    padding: 5px;
+    background: linear-gradient(#cc6600,white);
+}
+.foot{
+    width: 1105px;
+    height: 10vh;
+    background: #666633;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.textfoot{
+    font-family: 'Pacifico';
+    font-size: 28px;
+    color: wheat;
+}
+
+.textBlock{
+    width: 1000px;
+    height: auto;
+    border: 1px solid #3d3d29;
+    border-radius: 15px;
+    box-shadow: 2px 2px gray;
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(white,#c2c2a3);
+    font-family: 'Neucha';
+}
+#box {
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  border-top: 3px dotted #cc3300;
+  border-bottom: 3px dotted #cc3300;
+  box-shadow: inset 0 -1px 0 0 #cc3300, inset 0 1px 0 0 #cc3300, 0 1px 0 0 #cc3300, 0 -1px 0 0 #cc3300;
+  margin-bottom: 1px;
+}
+
+#slider {
+  position: relative; 
+}
+
+.img1,.img2,.img3,.img4,.img5,.img6,.img7 {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 1105px;
+  height: 28vw;;
+}
+
+
+#btns {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.inpt{
+    margin-top: 20px;
+    border: 1px solid brown;
+    border-radius: 10px;
+    height: 20px;
+    box-shadow: 2px 2px gray;
+    padding: 10px;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+input:placeholder-shown{
+    color: brown;
+}
+input:focus, textarea:focus {
+	transform: scale(1.09);
+    border: 1px solid #44030c;
+    background-color: white;
+    transition: 1s;
+}
+.typeForm,.address{
+    width: 500px;
+    height: 450px;
+    border: 1px solid brown;
+    border-radius: 35px;
+    margin: 20px;
+    background: linear-gradient(white, #b07136);
+    padding: 60px;
+}
+.sendForm{
+    width: 300px;
+    height: 20px;
+    border-bottom: 3px solid brown;
+    box-shadow: 2px 2px gray;
+    padding: 10px;
+    background-color: #c8cab9;
+}
+.form-Input_Wrapper {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.form-Input_Wrapper label {
+	font-size: 15px;
+}
+input:required + label:after{
+	content: "*";
+	font-size: 20px;
+	position: relative;
+	top: 6px;
+	display: inline-flex;
+	margin-left: 5px;
+	transition: color, 1s;
+}
+input:required:invalid + label:after {
+	color: red;
+}
+
+input:required:valid + label:after{
+	color: green;
+}
+
+.sendBtn{
+    width: 320px;
+    height: 20px;
+    border: 1px solid brown;
+/*    border-radius: 10px;*/
+    box-shadow: 2px 2px gray;
+    padding: 10px;
+}
+.sendButton:hover{
+    background-color: #b07136;
+}
+textarea{
+    width: 320px;
+    height: 120px;
+    border: 1px solid brown;
+/*    border-radius: 10px;*/
+    box-shadow: 2px 2px gray;
+    padding: 20px;
+    background-color: #c8cab9;
+}
+
+
+/*shopBlock*/
+.mainBlock{
+    margin: 0 50px 0 50px;
+    display: flex;
+/*    width: 650px;*/
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.bagBlock,.hatBlock{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #426600;
+    box-shadow: 2px 2px 2px #74b300;
+    border-radius: 15px;
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.goods{
+    width: 500px;
+    height: 60px;
+    font-size: 44px;
+    text-align: center;
+    color: wheat;
+    border-radius: 30px;
+    color: #669900;
+    letter-spacing: 2px;
+    box-shadow: 3px 3px 2px #669900;
+    background: linear-gradient(white,#cc6600,white);
+    font-family: 'Pacifico';
+}
+.goodsFiltr{
+    height: 600px;
+    width: 300px;
+    border: 1px solid #446600;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+    background-color: #eeffcc;
+    border-radius: 15px;
+    font-size: 20px;
+}
+#filtr,#catalog{
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    background: linear-gradient(white,#669900,white);
+    color: white;
+}
+.block{
+    display: flex;
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*    float: left;*/
+}
+.inptShop{
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+}
+.name,.price{
+    font-size: 25px;
+    color:  #0d1a00;
+    font-weight: 800;
+}
+.namePrice{
+    width: 300px;
+    height: 50px;
+    background-color: #b8b894;
+    position: absolute;
+    top: 260px;
+    opacity: 0.5;
+    color: white;
+/*    border-radius: 0 0 10px 10px;*/
+}
+.buy{
+    width: 160px;
+    height: 35px;
+    background: linear-gradient(blue,burlywood);
+    display: none;
+    color: wheat;
+}
+.namePrice:hover .buy{
+    display: block;
+}
+.choose{
+    padding: 5px;
+    border-radius: 10px;
+    background: #446600;
+    color: white;
+}
+.brands,.items{
+    text-decoration: none;
+    color: #213300;
+    font-size: 28px;
+    font-family: 'Pacifico';
+}
+.diffcake{
+    text-decoration: none;
+    color: #213300;
+    font-size: 20px;
+    font-family: 'Pacifico';
+}
+/*ngDialog*/
+.dialog{
+    border: 1px solid blue;
+    color: blue;
+    padding: 10px;
+    border-radius: 5px;
+}

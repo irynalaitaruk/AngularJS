@@ -1,0 +1,88 @@
+<div>
+   
+<div ng-show="shopblock">
+                       <div class="goods">НАША ВИПІЧКА</div> <br>
+                       
+<div class="block">
+        <div class="goodsFiltr">
+           <p id="filtr">Фільтр</p> <br>
+
+                <a href="#" class="brands"> Торти: </a> <br>
+                <a href="#" class="diffcake" ng-click="birthday()"> - до дня народження </a> <br>
+                <a href="#" class="diffcake" ng-click="babychristen()"> - на хрестини </a> <br>
+                <a href="#" class="diffcake" ng-click="firstchurch()"> - до першого причастя </a> <br>
+                <a href="#" class="diffcake" ng-click="mirrou()"> - дзеркальні торти </a> <br>
+                <a href="#" class="diffcake" ng-click="babycakes()"> - дитяча тематика </a> <br>
+<!--
+                <h1>Торти</h1>
+            <select class="inptShop" ng-model="name">
+                        <option value="до дня народження" selected>до дня народження</option>
+                        <option value="на хрестини"> на хрестини</option>
+                        <option value="до першого причастя"> до першого причастя</option>
+                        <option value="дзеркальні торти">дзеркальні торти </option>
+                        <option value="дитяча тематика"> дитяча тематика</option>
+            </select>
+                <input type="button" value="choose" class="choose" ng-click="checkBrand()">
+           <br><br>
+-->
+        
+               <a href="#" class="items" ng-click="bags()">Капкейки</a> <br> <br>
+               <a href="#" class="items" ng-click="hat()">Тістечка</a> <br> <br>
+               <a href="#" class="items">Макаруни</a> <br> <br>
+     </div>
+     
+     
+     <div class="firsrBlock" ng-show="firstItems">
+        <div ng-repeat="a in cakes track by $index" class="bagBlock">   
+                  <img src="{{a.image}}" style="width: 300px; height: 300px">
+                   <br><br>          
+                       <div class="namePrice">
+                            <div class="name">{{a.name}}<div>
+                                    </div>
+                             </div>
+                      </div> 
+         </div>
+     </div>
+    
+        <div class="secondBlock" ng-show="secondItems">
+        <div ng-repeat="b in babychristen track by $index" class="bagBlock">   
+                  <img src="{{b.image}}" style="width: 300px; height: 300px">
+                   <br><br>          
+                       <div class="namePrice">
+                            <div class="name">{{b.name}}<div>
+                                    </div>
+                             </div>
+                      </div> 
+         </div>
+     </div>
+                         
+<!--
+                       
+<div ng-show="brandInform" class="bagBlock">
+                            
+    <div><img src="{{themecakeImage}}" alt="cake" style="width: 250px; height: 250px"> </div><br>
+            <div class="namePrice">
+                <div class="name">{{themecakeName}} </div><br>
+             </div>   
+</div>
+-->
+
+
+
+<!--
+<div ng-show="brandHatInform" class="hatBlock">
+                            
+    <div><img src="{{brandHatImage}}" style="width: 200px; height: 200px"> </div><br>
+             <div class="namePrice">
+                 <div class="name">{{brandHatName}} </div><br>
+                 <div class="price">{{brandHatPrice}} $</div>
+                 <input type="button" value="BUY" class="buy">
+              </div>   
+</div>
+-->
+         
+     
+     
+</div>
+                   
+</div>
